@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/meal-selection/static/css/main.8855dc82.chunk.css",
-    "main.js": "/meal-selection/static/js/main.a8cff998.chunk.js",
-    "main.js.map": "/meal-selection/static/js/main.a8cff998.chunk.js.map",
-    "runtime-main.js": "/meal-selection/static/js/runtime-main.5adbb58d.js",
-    "runtime-main.js.map": "/meal-selection/static/js/runtime-main.5adbb58d.js.map",
+    "main.css": "/meal-selection/static/css/main.2ae353fd.chunk.css",
+    "main.js": "/meal-selection/static/js/main.ece3c610.chunk.js",
+    "main.js.map": "/meal-selection/static/js/main.ece3c610.chunk.js.map",
+    "runtime-main.js": "/meal-selection/static/js/runtime-main.6dca0c26.js",
+    "runtime-main.js.map": "/meal-selection/static/js/runtime-main.6dca0c26.js.map",
     "static/css/2.658248ec.chunk.css": "/meal-selection/static/css/2.658248ec.chunk.css",
-    "static/js/2.b57854b6.chunk.js": "/meal-selection/static/js/2.b57854b6.chunk.js",
-    "static/js/2.b57854b6.chunk.js.map": "/meal-selection/static/js/2.b57854b6.chunk.js.map",
-    "static/js/3.1f3359a1.chunk.js": "/meal-selection/static/js/3.1f3359a1.chunk.js",
-    "static/js/3.1f3359a1.chunk.js.map": "/meal-selection/static/js/3.1f3359a1.chunk.js.map",
+    "static/js/2.0042b636.chunk.js": "/meal-selection/static/js/2.0042b636.chunk.js",
+    "static/js/2.0042b636.chunk.js.map": "/meal-selection/static/js/2.0042b636.chunk.js.map",
+    "static/js/3.898884db.chunk.js": "/meal-selection/static/js/3.898884db.chunk.js",
+    "static/js/3.898884db.chunk.js.map": "/meal-selection/static/js/3.898884db.chunk.js.map",
     "index.html": "/meal-selection/index.html",
     "static/css/2.658248ec.chunk.css.map": "/meal-selection/static/css/2.658248ec.chunk.css.map",
-    "static/css/main.8855dc82.chunk.css.map": "/meal-selection/static/css/main.8855dc82.chunk.css.map",
-    "static/js/2.b57854b6.chunk.js.LICENSE.txt": "/meal-selection/static/js/2.b57854b6.chunk.js.LICENSE.txt"
+    "static/css/main.2ae353fd.chunk.css.map": "/meal-selection/static/css/main.2ae353fd.chunk.css.map",
+    "static/js/2.0042b636.chunk.js.LICENSE.txt": "/meal-selection/static/js/2.0042b636.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5adbb58d.js",
+    "static/js/runtime-main.6dca0c26.js",
     "static/css/2.658248ec.chunk.css",
-    "static/js/2.b57854b6.chunk.js",
-    "static/css/main.8855dc82.chunk.css",
-    "static/js/main.a8cff998.chunk.js"
+    "static/js/2.0042b636.chunk.js",
+    "static/css/main.2ae353fd.chunk.css",
+    "static/js/main.ece3c610.chunk.js"
   ]
 }
