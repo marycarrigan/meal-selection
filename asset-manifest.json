@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/meal-selection/static/css/main.afd7172b.chunk.css",
-    "main.js": "/meal-selection/static/js/main.308b57d1.chunk.js",
-    "main.js.map": "/meal-selection/static/js/main.308b57d1.chunk.js.map",
-    "runtime-main.js": "/meal-selection/static/js/runtime-main.6dca0c26.js",
-    "runtime-main.js.map": "/meal-selection/static/js/runtime-main.6dca0c26.js.map",
+    "main.js": "/meal-selection/static/js/main.f3175890.chunk.js",
+    "main.js.map": "/meal-selection/static/js/main.f3175890.chunk.js.map",
+    "runtime-main.js": "/meal-selection/static/js/runtime-main.cd1b5118.js",
+    "runtime-main.js.map": "/meal-selection/static/js/runtime-main.cd1b5118.js.map",
     "static/css/2.658248ec.chunk.css": "/meal-selection/static/css/2.658248ec.chunk.css",
-    "static/js/2.5891d72e.chunk.js": "/meal-selection/static/js/2.5891d72e.chunk.js",
-    "static/js/2.5891d72e.chunk.js.map": "/meal-selection/static/js/2.5891d72e.chunk.js.map",
-    "static/js/3.898884db.chunk.js": "/meal-selection/static/js/3.898884db.chunk.js",
-    "static/js/3.898884db.chunk.js.map": "/meal-selection/static/js/3.898884db.chunk.js.map",
+    "static/js/2.e3c569dd.chunk.js": "/meal-selection/static/js/2.e3c569dd.chunk.js",
+    "static/js/2.e3c569dd.chunk.js.map": "/meal-selection/static/js/2.e3c569dd.chunk.js.map",
+    "static/js/3.257c5fc3.chunk.js": "/meal-selection/static/js/3.257c5fc3.chunk.js",
+    "static/js/3.257c5fc3.chunk.js.map": "/meal-selection/static/js/3.257c5fc3.chunk.js.map",
     "index.html": "/meal-selection/index.html",
     "static/css/2.658248ec.chunk.css.map": "/meal-selection/static/css/2.658248ec.chunk.css.map",
     "static/css/main.afd7172b.chunk.css.map": "/meal-selection/static/css/main.afd7172b.chunk.css.map",
-    "static/js/2.5891d72e.chunk.js.LICENSE.txt": "/meal-selection/static/js/2.5891d72e.chunk.js.LICENSE.txt",
+    "static/js/2.e3c569dd.chunk.js.LICENSE.txt": "/meal-selection/static/js/2.e3c569dd.chunk.js.LICENSE.txt",
     "static/media/vegetables.04a54c71.jpg": "/meal-selection/static/media/vegetables.04a54c71.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6dca0c26.js",
+    "static/js/runtime-main.cd1b5118.js",
     "static/css/2.658248ec.chunk.css",
-    "static/js/2.5891d72e.chunk.js",
+    "static/js/2.e3c569dd.chunk.js",
     "static/css/main.afd7172b.chunk.css",
-    "static/js/main.308b57d1.chunk.js"
+    "static/js/main.f3175890.chunk.js"
   ]
 }
