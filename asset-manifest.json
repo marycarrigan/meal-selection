@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/meal-selection/static/css/main.afd7172b.chunk.css",
-    "main.js": "/meal-selection/static/js/main.1e1db894.chunk.js",
-    "main.js.map": "/meal-selection/static/js/main.1e1db894.chunk.js.map",
-    "runtime-main.js": "/meal-selection/static/js/runtime-main.c1521a77.js",
-    "runtime-main.js.map": "/meal-selection/static/js/runtime-main.c1521a77.js.map",
+    "main.js": "/meal-selection/static/js/main.31945699.chunk.js",
+    "main.js.map": "/meal-selection/static/js/main.31945699.chunk.js.map",
+    "runtime-main.js": "/meal-selection/static/js/runtime-main.e3c90869.js",
+    "runtime-main.js.map": "/meal-selection/static/js/runtime-main.e3c90869.js.map",
     "static/css/2.658248ec.chunk.css": "/meal-selection/static/css/2.658248ec.chunk.css",
-    "static/js/2.f1bec7b0.chunk.js": "/meal-selection/static/js/2.f1bec7b0.chunk.js",
-    "static/js/2.f1bec7b0.chunk.js.map": "/meal-selection/static/js/2.f1bec7b0.chunk.js.map",
-    "static/js/3.534c5ffe.chunk.js": "/meal-selection/static/js/3.534c5ffe.chunk.js",
-    "static/js/3.534c5ffe.chunk.js.map": "/meal-selection/static/js/3.534c5ffe.chunk.js.map",
+    "static/js/2.5ead9540.chunk.js": "/meal-selection/static/js/2.5ead9540.chunk.js",
+    "static/js/2.5ead9540.chunk.js.map": "/meal-selection/static/js/2.5ead9540.chunk.js.map",
+    "static/js/3.b3bc0ebe.chunk.js": "/meal-selection/static/js/3.b3bc0ebe.chunk.js",
+    "static/js/3.b3bc0ebe.chunk.js.map": "/meal-selection/static/js/3.b3bc0ebe.chunk.js.map",
     "index.html": "/meal-selection/index.html",
     "static/css/2.658248ec.chunk.css.map": "/meal-selection/static/css/2.658248ec.chunk.css.map",
     "static/css/main.afd7172b.chunk.css.map": "/meal-selection/static/css/main.afd7172b.chunk.css.map",
-    "static/js/2.f1bec7b0.chunk.js.LICENSE.txt": "/meal-selection/static/js/2.f1bec7b0.chunk.js.LICENSE.txt",
+    "static/js/2.5ead9540.chunk.js.LICENSE.txt": "/meal-selection/static/js/2.5ead9540.chunk.js.LICENSE.txt",
     "static/media/bacon_asparagus_frittata.631100da.jpg": "/meal-selection/static/media/bacon_asparagus_frittata.631100da.jpg",
     "static/media/cauliflower_fried_rice.bf5e78ff.jpg": "/meal-selection/static/media/cauliflower_fried_rice.bf5e78ff.jpg",
     "static/media/salmon_spinach_tomato.32fdc53d.jpg": "/meal-selection/static/media/salmon_spinach_tomato.32fdc53d.jpg",
@@ -22,10 +22,10 @@
     "static/media/vegetables.04a54c71.jpg": "/meal-selection/static/media/vegetables.04a54c71.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c1521a77.js",
+    "static/js/runtime-main.e3c90869.js",
     "static/css/2.658248ec.chunk.css",
-    "static/js/2.f1bec7b0.chunk.js",
+    "static/js/2.5ead9540.chunk.js",
     "static/css/main.afd7172b.chunk.css",
-    "static/js/main.1e1db894.chunk.js"
+    "static/js/main.31945699.chunk.js"
   ]
 }
