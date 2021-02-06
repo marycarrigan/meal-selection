@@ -1,16 +1,14 @@
 import React, {Component} from 'react';
 import backgrnd from './images/vegetables.jpg';
 import './App.css';
-import {AppBar, Typography, Dialog, DialogTitle, DialogContent} from '@material-ui/core';
+import {AppBar, Typography, Dialog, DialogTitle, DialogContent, Checkbox, FormControlLabel} from '@material-ui/core';
 import choices from "./choices.js";
 import {Card, CardColumns, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Navbar, Row, Col} from 'reactstrap';
-import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import one from "./images/shrimp_chowder.jpg";
 import two from "./images/steak_zoodles.jpg";
 import three from "./images/cauliflower_fried_rice.jpg";
 import four from "./images/bacon_asparagus_frittata.jpg";
 import five from "./images/salmon_spinach_tomato.jpg"
-import update from 'immutability-helper';
 
 
 export default class App extends Component {
@@ -19,7 +17,8 @@ export default class App extends Component {
         super(props);
          this.state = {
              dialogOpen: true,
-             items: choices
+             items: choices,
+             selections : [false, false, false, false, false]
          }
          this.images = [one, two, three, four, five];
     }
@@ -45,6 +44,10 @@ export default class App extends Component {
                                             <CardTitle tag="h5">{item.title}</CardTitle>
                                             <CardSubtitle tag="h6"><b>Calories: </b>{item.calories}<b> Carbs: </b>{item.carbs}</CardSubtitle>
                                             <CardText>{item.description}</CardText>
+                                            <FormControlLabel
+                                                control={<Checkbox name={item.title}/>}
+                                                label="Select this meal"
+                                            />
                                         </CardBody>
                                     </Card>
                                     )}
@@ -54,6 +57,7 @@ export default class App extends Component {
             </>
         );
   }
+
 
 
 }
