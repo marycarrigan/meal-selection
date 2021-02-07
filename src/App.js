@@ -21,6 +21,9 @@ export default class App extends Component {
              selections : []
          }
          this.images = [one, two, three, four, five];
+         this.handleSelect = this.handleSelect.bind(this);
+         this.handleUnselect = this.handleUnselect.bind(this);
+         this.renderSelections = this.renderSelections.bind(this);
     }
 
 
@@ -36,22 +39,7 @@ export default class App extends Component {
                 <Row>
                     <Col sm={12} md={{size: 10, offset: 1}}>
                         <Navbar color="light" light expand="md">Selected</Navbar>
-                        <CardColumns>
-                            {this.state.selections.map((item, index) =>
-                                <Card>
-                                    <CardImg src={this.images[index]} />
-                                    <CardBody>
-                                        <CardTitle tag="h5">{item.title}</CardTitle>
-                                        <CardSubtitle tag="h6"><b>Calories: </b>{item.calories}<b> Carbs: </b>{item.carbs}</CardSubtitle>
-                                        <CardText>{item.description}</CardText>
-                                        <FormControlLabel
-                                            control={<Checkbox name={item.title}/>}
-                                            label="Unselect this meal"
-                                        />
-                                    </CardBody>
-                                </Card>
-                            )}
-                        </CardColumns>
+                        {this.renderSelections}
                         <Navbar color="light" light expand="md">Other Choices</Navbar>
                         <CardColumns>
                             {this.state.items.map((item, index) =>
@@ -62,7 +50,7 @@ export default class App extends Component {
                                         <CardSubtitle tag="h6"><b>Calories: </b>{item.calories}<b> Carbs: </b>{item.carbs}</CardSubtitle>
                                         <CardText>{item.description}</CardText>
                                         <FormControlLabel
-                                            control={<Checkbox name={item.title}/>}
+                                            control={<Checkbox name={item.title} onChange={(event) => this.handleSelect(item)}/>}
                                             label="Select this meal"
                                         />
                                     </CardBody>
@@ -75,7 +63,46 @@ export default class App extends Component {
         );
   }
 
+  renderSelections(){
+            return (
+                <CardColumns>
+                    {this.state.selections.map((item, index) =>
+                        <Card>
+                            <CardImg src={this.images[index]} />
+                            <CardBody>
+                                <CardTitle tag="h5">{item.title}</CardTitle>
+                                <CardSubtitle tag="h6"><b>Calories: </b>{item.calories}<b> Carbs: </b>{item.carbs}</CardSubtitle>
+                                <CardText>{item.description}</CardText>
+                                <FormControlLabel
+                                    control={<Checkbox name={item.title} onChange={(event) => this.handleUnselect(item)}/>}
+                                    label="Unselect this meal"
+                                />
+                            </CardBody>
+                        </Card>
+                    )}
+                </CardColumns>
+            )
+  }
 
+  handleSelect(obj){
+        this.setState({selections: this.state.selections.push(obj)});
+        let i = this.findRecipe(obj, this.state.items);
+        this.setState({items: this.state.items.splice(i,1)});
+        this.forceUpdate()
+  }
 
+  handleUnselect(obj){
+      this.setState({items: this.state.items.push(obj)});
+      let i = this.findRecipe(obj, this.state.selections);
+      this.setState({items: this.state.selections.splice(i,1)});
+  }
+
+  findRecipe(obj, array){
+        for(let i = 0; i < array.length; i++){
+            if(obj === array[i])
+                return i;
+        }
+        return -1;
+  }
 }
 
