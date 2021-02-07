@@ -18,7 +18,7 @@ export default class App extends Component {
          this.state = {
              dialogOpen: true,
              items: choices,
-             selections : [false, false, false, false, false]
+             selections : []
          }
          this.images = [one, two, three, four, five];
     }
@@ -33,27 +33,44 @@ export default class App extends Component {
                    <DialogContent>Welcome to "Meals by Mary". Select the meals you would like me, your wonderful gourmet chef daughter, to prepare for you!</DialogContent>
                </Dialog>
                 <Navbar color="light" light expand="md"/>
-
                 <Row>
                     <Col sm={12} md={{size: 10, offset: 1}}>
+                        <Navbar color="light" light expand="md">Selected</Navbar>
+                        <CardColumns>
+                            {this.state.selections.map((item, index) =>
+                                <Card>
+                                    <CardImg src={this.images[index]} />
+                                    <CardBody>
+                                        <CardTitle tag="h5">{item.title}</CardTitle>
+                                        <CardSubtitle tag="h6"><b>Calories: </b>{item.calories}<b> Carbs: </b>{item.carbs}</CardSubtitle>
+                                        <CardText>{item.description}</CardText>
+                                        <FormControlLabel
+                                            control={<Checkbox name={item.title}/>}
+                                            label="Unselect this meal"
+                                        />
+                                    </CardBody>
+                                </Card>
+                            )}
+                        </CardColumns>
+                        <Navbar color="light" light expand="md">Other Choices</Navbar>
                         <CardColumns>
                             {this.state.items.map((item, index) =>
-                                    <Card>
-                                        <CardImg src={this.images[index]} />
-                                        <CardBody>
-                                            <CardTitle tag="h5">{item.title}</CardTitle>
-                                            <CardSubtitle tag="h6"><b>Calories: </b>{item.calories}<b> Carbs: </b>{item.carbs}</CardSubtitle>
-                                            <CardText>{item.description}</CardText>
-                                            <FormControlLabel
-                                                control={<Checkbox name={item.title}/>}
-                                                label="Select this meal"
-                                            />
-                                        </CardBody>
-                                    </Card>
-                                    )}
-                            </CardColumns>
-                        </Col>
-                    </Row>
+                                <Card>
+                                    <CardImg src={this.images[index]} />
+                                    <CardBody>
+                                        <CardTitle tag="h5">{item.title}</CardTitle>
+                                        <CardSubtitle tag="h6"><b>Calories: </b>{item.calories}<b> Carbs: </b>{item.carbs}</CardSubtitle>
+                                        <CardText>{item.description}</CardText>
+                                        <FormControlLabel
+                                            control={<Checkbox name={item.title}/>}
+                                            label="Select this meal"
+                                        />
+                                    </CardBody>
+                                </Card>
+                            )}
+                        </CardColumns>
+                    </Col>
+                </Row>
             </>
         );
   }
