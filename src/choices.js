@@ -2,31 +2,36 @@ const choices = [
 { "title": "Shrimp and Bacon Chowder" ,
   "description": "Shrimp and bacon chowder made with turnips, garlic, chicken broth, heavy whipping cream, shrimp, and Cajun seasoning.",
   "calories": 391,
-  "carbs": 5.6
+  "carbs": 5.6,
+  "selected": false
 },
 {
   "title": "Lemon Garlic Butter Steak and Zucchini Noodles",
   "description": "Steak marinated in soy sauce, lemon juice, olive oil, and Sriracha sauce, with garlic, lemon and butter flavoring both the steak and zoodles.",
   "calories": 640.63,
-  "carbs": 6.47
+  "carbs": 6.47,
+  "selected": false
 },
 {
   "title": "Sausage, Pepper, and Cauliflower Fried Rice",
   "description": "A blend of cauliflower, bell peppers, garlic, and smoked sausage, tossed with spices.",
   "calories": 320.98,
-  "carbs": 5.37
+  "carbs": 5.37,
+  "selected": false
 },
 {
   "title": "Bacon Asparagus Frittata",
   "description": "Bacon, asparagus, garlic, eggs, cheddar cheese, and cream combined into a frittata.",
   "calories": 302,
-  "carbs": 4
+  "carbs": 4,
+  "selected": false
 },
 {
   "title": "Salmon Skillet with Spinach and Tomato",
   "description": "Tuscan garlic salmon with sauteed spniach and tomato.",
   "calories": 370.54,
-  "carbs": 8.95
+  "carbs": 8.95,
+  "selected": false
 }
 ];
 export default choices;

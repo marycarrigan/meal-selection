@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import backgrnd from './images/vegetables.jpg';
 import './App.css';
-import {AppBar, Typography, Dialog, DialogTitle, DialogContent, Checkbox, FormControlLabel} from '@material-ui/core';
+import {AppBar, Typography, Dialog, DialogTitle, DialogContent, Checkbox} from '@material-ui/core';
 import choices from "./choices.js";
-import {Card, CardColumns, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Navbar, Row, Col} from 'reactstrap';
+import {Card, CardColumns, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Navbar, Row, Col, ListGroup, ListGroupItem} from 'reactstrap';
 import one from "./images/shrimp_chowder.jpg";
 import two from "./images/steak_zoodles.jpg";
 import three from "./images/cauliflower_fried_rice.jpg";
@@ -13,19 +13,17 @@ import five from "./images/salmon_spinach_tomato.jpg"
 
 export default class App extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
-         this.state = {
-             dialogOpen: true,
-             items: choices,
-             selections : []
-         }
-         this.images = [one, two, three, four, five];
-         this.handleSelect = this.handleSelect.bind(this);
-         this.handleUnselect = this.handleUnselect.bind(this);
-         this.renderSelections = this.renderSelections.bind(this);
+        this.state = {
+            dialogOpen: true,
+            items: choices,
+        }
+        this.selected = [false, false, false, false, false];
+        this.images = [one, two, three, four, five];
+        this.toggleSelected = this.toggleSelected.bind(this);
+        this.numSelected = 0;
     }
-
 
     render() {
         return (
@@ -35,26 +33,33 @@ export default class App extends Component {
                    <DialogTitle>Happy Birthday, Mom!</DialogTitle>
                    <DialogContent>Welcome to "Meals by Mary". Select the meals you would like me, your wonderful gourmet chef daughter, to prepare for you!</DialogContent>
                </Dialog>
-                <Navbar color="light" light expand="md"/>
+                <Navbar color="light" light expand="md"><h2>Selected</h2></Navbar>
                 <Row>
                     <Col sm={12} md={{size: 10, offset: 1}}>
-                        <Navbar color="light" light expand="md">Selected</Navbar>
-                        {this.renderSelections}
-                        <Navbar color="light" light expand="md">Other Choices</Navbar>
+                        {this.state.items.map((item, index) => {
+                                    if(this.selected[index]){
+                                        return(
+                                            <ListGroup>
+                                                <ListGroupItem>{item.title}</ListGroupItem>
+                                            </ListGroup>)}})}
+                    </Col>
+                </Row>
+                <Navbar color="light" light expand="md"><h2>Choices</h2></Navbar>
+                <Row>
+                    <Col sm={12} md={{size: 10, offset: 1}}>
                         <CardColumns>
-                            {this.state.items.map((item, index) =>
-                                <Card>
-                                    <CardImg src={this.images[index]} />
-                                    <CardBody>
-                                        <CardTitle tag="h5">{item.title}</CardTitle>
-                                        <CardSubtitle tag="h6"><b>Calories: </b>{item.calories}<b> Carbs: </b>{item.carbs}</CardSubtitle>
-                                        <CardText>{item.description}</CardText>
-                                        <FormControlLabel
-                                            control={<Checkbox name={item.title} onChange={(event) => this.handleSelect(item)}/>}
-                                            label="Select this meal"
-                                        />
-                                    </CardBody>
-                                </Card>
+                            {this.state.items.map((item, index) => {
+                                    return(
+                                        <Card>
+                                            <CardImg src={this.images[index]} />
+                                            <CardBody>
+                                                <CardTitle tag="h5">{item.title}</CardTitle>
+                                                <CardSubtitle tag="h6"><b>Calories: </b>{item.calories}<b> Carbs: </b>{item.carbs}</CardSubtitle>
+                                                <CardText>{item.description} </CardText>
+                                            </CardBody>
+                                            <Checkbox checked={this.selected[index]} onChange={() => this.toggleSelected(index)}/>
+                                        </Card>
+                                    )}
                             )}
                         </CardColumns>
                     </Col>
@@ -63,46 +68,15 @@ export default class App extends Component {
         );
   }
 
-  renderSelections(){
-            return (
-                <CardColumns>
-                    {this.state.selections.map((item, index) =>
-                        <Card>
-                            <CardImg src={this.images[index]} />
-                            <CardBody>
-                                <CardTitle tag="h5">{item.title}</CardTitle>
-                                <CardSubtitle tag="h6"><b>Calories: </b>{item.calories}<b> Carbs: </b>{item.carbs}</CardSubtitle>
-                                <CardText>{item.description}</CardText>
-                                <FormControlLabel
-                                    control={<Checkbox name={item.title} onChange={(event) => this.handleUnselect(item)}/>}
-                                    label="Unselect this meal"
-                                />
-                            </CardBody>
-                        </Card>
-                    )}
-                </CardColumns>
-            )
-  }
-
-  handleSelect(obj){
-        this.setState({selections: this.state.selections.push(obj)});
-        let i = this.findRecipe(obj, this.state.items);
-        this.setState({items: this.state.items.splice(i,1)});
-        this.forceUpdate()
-  }
-
-  handleUnselect(obj){
-      this.setState({items: this.state.items.push(obj)});
-      let i = this.findRecipe(obj, this.state.selections);
-      this.setState({items: this.state.selections.splice(i,1)});
-  }
-
-  findRecipe(obj, array){
-        for(let i = 0; i < array.length; i++){
-            if(obj === array[i])
-                return i;
+  toggleSelected(index){
+        if(this.numSelected == 3){
+            alert("Please only select 3 meals.");
+            return;
         }
-        return -1;
+        this.selected[index] = !this.selected[index];
+        this.numSelected++;
+        this.forceUpdate();
   }
+
 }
 
